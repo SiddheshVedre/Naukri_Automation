@@ -11,6 +11,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterSuite;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeSuite;
 
 
@@ -75,7 +76,7 @@ public class BaseClass  {
 		logger.info("---BaseClass work and Close perfectly---");
 	}
 
-	@AfterSuite(enabled = false)
+	@AfterSuite(enabled = true)
 	public void teardown() {
 
 		logger.info("---Windows Close Perfectly---");

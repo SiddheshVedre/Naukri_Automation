@@ -27,8 +27,8 @@ WebElement txtdesignation;
 @FindBy(xpath= "//*[@id='experienceDD']")
 WebElement btnexperience;
 	
-@FindBy(xpath= "//div[@class='dropdownPrimary']//li[@value='a0']")
-WebElement btntellExperience;
+@FindBy(xpath= "(//ul)[9]/child::li")
+List<WebElement> btntellExperience;
 
 
 
@@ -45,18 +45,19 @@ WebElement eleJob;
 List<WebElement> applications;
 
 	
-	public void SearchBar(String designation,String jobLocationclick) {
+	public void SearchBar(String designation,String jobLocationclick, String  experience) {
 		
 		//logger.info("---Search Bar opration happning---");
 		btnjobSearchBar.click();
 		txtdesignation.sendKeys(designation);
 		btnexperience.click();
-		btntellExperience.click();
+		
+		
+		selectExperience(Integer.parseInt(experience));
+		
+		
 		txtjobLocationclick.sendKeys(jobLocationclick);
 		btnpopupSearch.click();	
-		
-		
-	
 	}
 	
 	
@@ -67,6 +68,21 @@ List<WebElement> applications;
 			return (e.getMessage());
 		}
 		
+		
+	}
+	
+	
+	public void selectExperience(int index) {
+		
+        // Check if the index is valid
+        if (index >= 0 && index < btntellExperience.size()) {
+            // Get the element from the list using the index and click it
+            WebElement liElement = btntellExperience.get(index);
+            liElement.click();
+            
+        } else {
+            System.out.println("Invalid index: " + index);
+        }	
 	}
 	
 	

@@ -1,0 +1,7 @@
+---Starting the Selenium Test Suite---
+---FileReader Works Perfectly---
+---Browser Mximizing Perfectly---
+---BaseClass work and Close perfectly---
+@@@ TC001_JobSearchTest Started Running @@@
+---Passing Parameters Email ID, Password---
+---Passing Parameters Designation, Location---

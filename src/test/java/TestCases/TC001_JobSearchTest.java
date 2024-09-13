@@ -10,14 +10,15 @@ import PageObjects.HomePage;
 import PageObjects.JobSubmitPage;
 import PageObjects.LoginPage;
 import listeners.ListenerNaukri;
-import utilities.DataProviderClass;
+
+import utilities.ExcelUtility;
 
 @Listeners(ListenerNaukri.class)
 public class TC001_JobSearchTest extends BaseClass {
 
     // Test method using the DataProvider from DataProviderClass
-    @Test(dataProvider = "loginData", dataProviderClass = DataProviderClass.class)
-    public void verify_login(String username, String password, String designation, String Location, int applications) throws IOException {
+    @Test(dataProvider = "ExcelData", dataProviderClass = ExcelUtility.class)
+    public void verify_login(String username, String password, String designation, String Location, String application , String experience ) throws IOException {
 
         logger.info("@@@ TC001_JobSearchTest Started Running @@@");
 
@@ -32,21 +33,24 @@ public class TC001_JobSearchTest extends BaseClass {
             
             // Searching for jobs with designation and location
             logger.info("---Passing Parameters Designation, Location---");
-            hp.SearchBar(designation, Location);
+            hp.SearchBar(designation, Location, experience);
             
             // Verifying the confirmation message
             String confmsg = hp.getConfirmation();
             Assert.assertEquals(confmsg, "Jobs");
             
             // Applying to jobs using the number of applications
-            hp.applications(applications);
+            hp.applications(Integer.parseInt(application));
             jsp.ApplyClick();
+            
+            System.out.println("Script ComeBack to Test");
 
         } catch (Exception e) {
             logger.info("---TC001_JobSearchTest Failed---");
             Assert.fail();
         }
-
-        logger.info("@@@ TC001_JobSearchTest Completed Successfully @@@");
+        
+       
+        
     }
 }
