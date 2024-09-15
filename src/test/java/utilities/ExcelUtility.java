@@ -16,7 +16,7 @@ public class ExcelUtility {
 	@DataProvider(name = "ExcelData")
 	public  String[][] ExcelReader() throws IOException {
 		
-		File excelFile = new File("C:\\Practice_workspace\\NaukriTesting\\TestData\\Naukri_Automation_Details.xlsx");
+		File excelFile = new File(".\\TestData\\Naukri_Automation_Details.xlsx");
 		FileInputStream fis = new FileInputStream(excelFile);
 		XSSFWorkbook workbook = new XSSFWorkbook(fis);
 		XSSFSheet sheet = workbook.getSheet("LoginData");

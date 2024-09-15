@@ -20,7 +20,7 @@ public class TC001_JobSearchTest extends BaseClass {
     @Test(dataProvider = "ExcelData", dataProviderClass = ExcelUtility.class)
     public void verify_login(String username, String password, String designation, String Location, String application , String experience ) throws IOException {
 
-        logger.info("@@@ TC001_JobSearchTest Started Running @@@");
+    	System.out.println("@@@ TC001_JobSearchTest Started Running @@@");
 
         try {
             LoginPage lp = new LoginPage(driver);
@@ -28,11 +28,11 @@ public class TC001_JobSearchTest extends BaseClass {
             JobSubmitPage jsp = new JobSubmitPage(driver);
             
             // Logging in with username and password
-            logger.info("---Passing Parameters Email ID, Password---");
+            System.out.println("---Passing Parameters Email ID, Password---");
             lp.LoginInfo(username, password);
             
             // Searching for jobs with designation and location
-            logger.info("---Passing Parameters Designation, Location---");
+            System.out.println("---Passing Parameters Designation, Location---");
             hp.SearchBar(designation, Location, experience);
             
             // Verifying the confirmation message
@@ -46,7 +46,7 @@ public class TC001_JobSearchTest extends BaseClass {
             System.out.println("Script ComeBack to Test");
 
         } catch (Exception e) {
-            logger.info("---TC001_JobSearchTest Failed---");
+        	System.out.println("---TC001_JobSearchTest Failed---");
             Assert.fail();
         }
         
