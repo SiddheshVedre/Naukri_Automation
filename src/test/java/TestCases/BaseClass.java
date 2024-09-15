@@ -73,10 +73,12 @@ public class BaseClass  {
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(1, TimeUnit.MINUTES);
 		
+		
+		
 		System.out.println("---BaseClass work and Close perfectly---");
 	}
 
-	@AfterTest(enabled = true)
+	@AfterTest(enabled = false)
 	public void teardown() {
 
 		System.out.println("---Windows Close Perfectly---");

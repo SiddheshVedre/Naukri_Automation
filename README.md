@@ -13,7 +13,7 @@
    git clone https://github.com/SiddheshVedre/Naukri_Automation.git
    ```
 
-3. Refresh your project and move all files from the `Naukri_Automation` folder to the newly created folder `GitCloneNaukri`.
+3. Refresh your project and move all files from the `Naukri_Automation` folder to the newly created Java Project `GitCloneNaukri`.
 
 4. Right-click on `GitCloneNaukri` folder in your IDE, then:
    - Click on **Configure**
