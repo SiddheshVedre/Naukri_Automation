@@ -44,6 +44,9 @@ WebElement eleJob;
 @FindBy(xpath= "//div[@class='cust-job-tuple layout-wrapper lay-2 sjw__tuple ']")
 List<WebElement> applications;
 
+@FindBy(xpath= "//a[text()='View']")
+WebElement btnViewProfile;
+
 	
 	public void SearchBar(String designation,String jobLocationclick, String  experience) {
 		
@@ -96,9 +99,13 @@ List<WebElement> applications;
 		{
 			actions.moveToElement(applications.get(i)).click().perform();
 		}
-		
 	
-
+	}
+	
+	
+	public void clickonProfile(){
+		
+		btnViewProfile.click();
 	}
 	
 }

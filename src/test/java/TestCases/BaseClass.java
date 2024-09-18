@@ -10,15 +10,14 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.AfterClass;
+
+import org.testng.annotations.BeforeClass;
+
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+
 
 public class BaseClass  {
 
@@ -29,8 +28,8 @@ public class BaseClass  {
   
 
 	@SuppressWarnings("deprecation")
-	@BeforeTest
-
+	
+	@BeforeClass
 	public void setup() throws IOException {
 
 	
@@ -77,8 +76,9 @@ public class BaseClass  {
 		
 		System.out.println("---BaseClass work and Close perfectly---");
 	}
+	
 
-	@AfterTest(enabled = false)
+	@AfterClass(enabled = true)
 	public void teardown() {
 
 		System.out.println("---Windows Close Perfectly---");

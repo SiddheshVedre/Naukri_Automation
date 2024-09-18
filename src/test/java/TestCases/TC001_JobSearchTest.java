@@ -9,15 +9,15 @@ import org.testng.annotations.Test;
 import PageObjects.HomePage;
 import PageObjects.JobSubmitPage;
 import PageObjects.LoginPage;
-import listeners.ListenerNaukri;
+import ReportsListeners.ListenerNaukri;
+import utilities.DataProviderClass;
 
-import utilities.ExcelUtility;
 
 @Listeners(ListenerNaukri.class)
 public class TC001_JobSearchTest extends BaseClass {
 
     // Test method using the DataProvider from DataProviderClass
-    @Test(dataProvider = "ExcelData", dataProviderClass = ExcelUtility.class)
+    @Test(dataProvider = "AllData", dataProviderClass = DataProviderClass.class)
     public void verify_login(String username, String password, String designation, String Location, String application , String experience ) throws IOException {
 
     	System.out.println("@@@ TC001_JobSearchTest Started Running @@@");

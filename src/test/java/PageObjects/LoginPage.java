@@ -26,7 +26,6 @@ WebElement txtPasswordField;
 WebElement btnPopupLoginButton;
 
 
-
 public void LoginInfo(String username, String password) {
 	
 	btnLoginBtn.click();

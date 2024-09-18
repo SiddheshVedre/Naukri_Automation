@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 
 import org.openqa.selenium.support.PageFactory;
 
-import TestCases.BaseClass;
+
 
 public class BasePage {
 
