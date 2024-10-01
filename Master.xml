@@ -11,8 +11,9 @@
    
    
     <classes>
-     <!-- <class name="TestCases.TC001_JobSearchTest"/> -->
+     
       <class name="TestCases.TC002_ProfileUpdateDaily"/>
+      <class name="TestCases.TC001_JobSearchTest"/> 
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
