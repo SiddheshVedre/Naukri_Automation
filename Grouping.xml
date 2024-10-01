@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
+
+  <groups>
+  	<run>
+  		<include name="Master"/>	
+  	</run>
+  </groups>
+  
+  
   <test thread-count="5" name="Test">
+  
+   <parameter name ="br" value="chrome"/>
+   <parameter name ="url" value="https://www.naukri.com/"/>
+  
     <classes>
        <class name="TestCases.TC002_ProfileUpdateDaily"/>
       <class name="TestCases.TC001_JobSearchTest"/>

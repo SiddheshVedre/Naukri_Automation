@@ -15,10 +15,10 @@ public class ViewProfilePage extends BasePage {
 	}
 	
 	
-@FindBy(xpath = "//em[@Class='icon edit']")
+@FindBy(xpath = "//*[@Class='icon edit ']")
 WebElement btnEditIcaon;
 
-@FindBy(xpath = "//button[text()='Save']")
+@FindBy(xpath = "//*[text()='Save']")
 WebElement btnSave;
 
 
@@ -26,7 +26,7 @@ WebElement btnSave;
 
 	public void UpdateProfile() {
 		btnEditIcaon.click();
-		btnSave.click();
+		btnSave.submit();
 		
 	}
 }
