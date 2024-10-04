@@ -1,0 +1,19 @@
+# Eclipse specific files
+.classpath
+.project
+.settings/
+
+# Maven and Gradle build folders
+target/
+*.log
+
+# Java compiled files
+*.class
+*.jar
+
+# Ignore VS Code settings (optional if switching between IDEs)
+.vscode/
+
+# OS-specific files
+.DS_Store    # macOS
+Thumbs.db    # Windows
