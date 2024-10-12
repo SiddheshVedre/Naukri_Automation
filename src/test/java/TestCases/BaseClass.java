@@ -26,10 +26,12 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.ITestContext;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
+
+import org.testng.annotations.AfterTest;
+
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
-import org.testng.annotations.Test;
+
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -39,13 +41,14 @@ public class BaseClass {
     public Properties properties = new Properties();
     
    
-
+//  >>>>>>>>>>>>>>>>>>>>>  Before Test Run  <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 	@SuppressWarnings("deprecation")
-	@Parameters({ "browser", "os", "url" }) // ADD OS XML PARA
-	@BeforeClass
-	public void setup(String browser, String os, String url, ITestContext context) throws IOException { // ADD OS METHOD
-																										// PARA
+	@Parameters({ "browser", "os", "url" }) // --------- XML Properties Parameters  --------------------
+	@BeforeTest
+	public void setup(String browser, String os, String url, ITestContext context) throws IOException { 
+																										
 
+		//  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Property Files  <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 		try {
 			FileReader config = new FileReader(".\\src\\test\\resources\\configfiles\\config.properties");
 			properties.load(config);
@@ -57,12 +60,15 @@ public class BaseClass {
 
 		System.out.println("---FileReader Works Perfectly---");
 
-		// ADD IF : RUN ON LOCAL using config.properties
+		// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Local Testing code <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 		if (properties.getProperty("execution_env").equalsIgnoreCase("Local")) {
 
+	        	
 			try {
+			   //  ----------------------------------  Local Chrome Setup  --------------------------
 				if (browser.equalsIgnoreCase("chrome")) {
 
+					
 					WebDriverManager.chromedriver().setup();
 					driver = new ChromeDriver();
 					driver.get(url);
@@ -72,8 +78,7 @@ public class BaseClass {
 					driver.manage().timeouts().implicitlyWait(1, TimeUnit.MINUTES);
 					System.out.println("---BaseClass work and Close perfectly---");
 				
-			
-
+				//  ----------------------------------  Local FireFox Setup  --------------------------
 				} else if (browser.equalsIgnoreCase("firefox")) {
 
 					WebDriverManager.firefoxdriver().setup();
@@ -85,8 +90,7 @@ public class BaseClass {
 					driver.manage().timeouts().implicitlyWait(1, TimeUnit.MINUTES);
 					System.out.println("---BaseClass work and Close perfectly---");
 		
-			
-
+				//  ----------------------------------  Local Edge Setup  -----------------------------
 				} else if (browser.equalsIgnoreCase("edge")) {
 
 					WebDriverManager.edgedriver().setup();
@@ -98,8 +102,6 @@ public class BaseClass {
 					driver.manage().timeouts().implicitlyWait(1, TimeUnit.MINUTES);
 					System.out.println("---BaseClass work and Close perfectly---");
 					
-
-
 				} else {
 
 					throw new IllegalArgumentException("Browser type not supported");
@@ -114,13 +116,13 @@ public class BaseClass {
 
 		
 		
-		// ADD IF : RUN ON REMOTE using config.properties
+		// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>  REMOTE Testing code <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 		if (properties.getProperty("execution_env").equalsIgnoreCase("Remote")) {
 
 			// Remote Browser Setting here
 			DesiredCapabilities capable = new DesiredCapabilities();
 
-			// OS
+			// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Remote OS  <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 			if (os.equalsIgnoreCase("windows")) {
 
 				// Windows os initilization
@@ -139,16 +141,20 @@ public class BaseClass {
 			
 			System.out.println("Remote Browser Collect Perfectly");
 
-			// Browser
+			// >>>>>>>>>>>>>>>>>>>>>>>>>>>>  Remote Browsers  <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 			switch (browser.toLowerCase()) {
 			case "chrome":
-				capable.setBrowserName("chrome");
-				
+				capable.setBrowserName("chrome"); //----- Remote Chrome  -----
 				break;
+				
 			case "edge":
-				capable.setBrowserName("MicrosoftEdge");
-				
+				capable.setBrowserName("Edge");   //-----  Remote  Edge  -----
 				break;
+				
+			case "firefox":
+				capable.setBrowserName("firefox"); //-----  Remote  Firefox  -----
+				break;
+					
 			default:
 				throw new IllegalArgumentException("Invalid OS entered");
 				
@@ -156,7 +162,7 @@ public class BaseClass {
 			
 			System.out.println("Remote OS Collect Perfectly");
 
-			
+			// >>>>>>>>>>>>>>>>>>>>>>>  Assign Selenium Hub Server to the Driver <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 			   try {
 			        driver = new RemoteWebDriver(new URL("http://192.168.0.101:4444"), capable);
 			    } catch (MalformedURLException e) {
@@ -165,26 +171,28 @@ public class BaseClass {
 			    }
 			   
 			   System.out.println("Remote URL Collect Perfectly");
-			   driver.get(url);
-
+			   
+			 // >>>>>>>>>>>>>>>>>>>>>>  Remote Driver Config  <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+			    driver.get(url);
+			    
 				driver.manage().window().maximize();
 				System.out.println("---Browser Mximizing Perfectly---");
+				
+				
+			// >>>>>>>>>>>>>>>>>>>  Implicit Wait  <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 				driver.manage().timeouts().implicitlyWait(1, TimeUnit.MINUTES);
 				System.out.println("---BaseClass work and Close perfectly---");
 				
 				System.out.println("Remote Naukri.com Collect Perfectly & Open");
 
 		}
-		
-		
-		
-		
 	}
        
     
     
-
-    @AfterClass(enabled = false)
+	
+//  >>>>>>>>>>>>>>>>>>>>>>>>>  After Test Run  <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<	
+    @AfterTest(enabled = false)
     public void teardown() {
         if (driver != null) {
             driver.quit();
@@ -196,7 +204,7 @@ public class BaseClass {
     
     
 
-    // Method to capture a screenshot
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Method to Capture a Screenshot  <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
     public String captureFailureScreenshot(WebDriver driver, String testName) throws IOException {
         String screenshotPath = null;
         try {
@@ -211,12 +219,6 @@ public class BaseClass {
         return screenshotPath;
     }
     
-    
-    @Test
-    public void runclass(){
-
-        System.out.println("Hello VS Code");
-
-    }
+   
 
 }
