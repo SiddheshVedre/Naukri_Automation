@@ -10,13 +10,15 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
+// >>>>>>>>>>>>>>>>>>>  Home : Page Class  <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 public class HomePage extends BasePage {
 	
-	
+	// >>>>>>>>>>>>>>>>>>>>>>>  HomePage Constructor  <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 	public HomePage(WebDriver driver) throws IOException {
 		super(driver);
 	}
 
+//  >>>>>>>>>>>>>>>>>>>>>>>>>  Elements Locatores	<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 @FindBy(xpath= "//span[@class='nI-gNb-sb__placeholder']")
 WebElement btnjobSearchBar;
 
@@ -47,7 +49,7 @@ List<WebElement> applications;
 @FindBy(xpath= "//a[text()='View']")
 WebElement btnViewProfile;
 
-	
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Handling Search Bar Opration <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 	public void SearchBar(String designation,String jobLocationclick, String  experience) {
 		
 		//logger.info("---Search Bar opration happning---");
@@ -64,6 +66,7 @@ WebElement btnViewProfile;
 	}
 	
 	
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>> Getting the confirmation  <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<	
 	public String getConfirmation() {
 		try {
 			return (eleJob.getText());
@@ -74,7 +77,7 @@ WebElement btnViewProfile;
 		
 	}
 	
-	
+//  >>>>>>>>>>>>>>>>>>>>>>  Selecting Experience on Job Serach Bar  <<<<<<<<<<<<<<<<<<<<<<<<<
 	public void selectExperience(int index) {
 		
         // Check if the index is valid
@@ -88,7 +91,7 @@ WebElement btnViewProfile;
         }	
 	}
 	
-	
+// >>>>>>>>>>>>>>>>>>>>>>>>> Selecting Applications Passed in Excel File  <<<<<<<<<<<<<<<<<<<<<<<<<
 	public void applications(int applications2) {
 		
 		Actions actions = new Actions(driver);
@@ -102,7 +105,8 @@ WebElement btnViewProfile;
 	
 	}
 	
-	
+
+//  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Click On View Profile Button  <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<	
 	public void clickonProfile(){
 		
 		btnViewProfile.click();

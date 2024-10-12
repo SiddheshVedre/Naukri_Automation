@@ -10,16 +10,22 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+//>>>>>>>>>>>>>>>>>>>  Job Submit : Page Class  <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 public class JobSubmitPage extends BasePage {
 
-	// Correctly passing the WebDriver instance to the parent class
+	// >>>>>>>>>>>>>>>>>>>>>>>  JobSubmitPage Constructor  <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 	public JobSubmitPage(WebDriver driver) throws IOException {
 		super(driver); // Pass the driver to the parent class
 	}
 
+//  >>>>>>>>>>>>>>>>>>>>>>>>>  Elements Locatores	<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<	
 	@FindBy(xpath = "//div[@class='styles_jhc__apply-button-container__5Bqnb']//button[2]")
 	WebElement buttonXPath;
 
+	
+	
+	
+// >>>>>>>>>>>>>>>>>>>>>>>>>>  Click On Apply BUtton of all Open Profile  <<<<<<<<<<<<<<<<<<<<<<<<<<	
 	public void ApplyClick() {
 
 		Set<String> windowHandles = driver.getWindowHandles();
