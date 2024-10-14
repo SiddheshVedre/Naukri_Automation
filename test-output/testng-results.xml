@@ -1,127 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="2" failed="2" skipped="0">
+<testng-results ignored="0" total="3" passed="0" failed="2" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-10-12T08:45:17 IST" name="Suite" finished-at="2024-10-12T08:45:46 IST" duration-ms="29621">
+  <suite started-at="2024-10-14T08:54:21 IST" name="Suite" finished-at="2024-10-14T08:57:24 IST" duration-ms="182791">
     <groups>
       <group name="Master">
-        <method signature="TC002_ProfileUpdateDaily.ProfileUpdate(java.lang.String,java.lang.String)[pri:0, instance:TestCases.TC002_ProfileUpdateDaily@792b749c]" name="ProfileUpdate" class="TestCases.TC002_ProfileUpdateDaily"/>
+        <method signature="TC002_ProfileUpdateDaily.ProfileUpdate(java.lang.String,java.lang.String)[pri:0, instance:TestCases.TC002_ProfileUpdateDaily@231f98ef]" name="ProfileUpdate" class="TestCases.TC002_ProfileUpdateDaily"/>
+        <method signature="TC002_ProfileUpdateDaily.ProfileUpdate(java.lang.String,java.lang.String)[pri:0, instance:TestCases.TC002_ProfileUpdateDaily@740fb309]" name="ProfileUpdate" class="TestCases.TC002_ProfileUpdateDaily"/>
+        <method signature="TC002_ProfileUpdateDaily.ProfileUpdate(java.lang.String,java.lang.String)[pri:0, instance:TestCases.TC002_ProfileUpdateDaily@43f02ef2]" name="ProfileUpdate" class="TestCases.TC002_ProfileUpdateDaily"/>
       </group> <!-- Master -->
       <group name="Regression_Testing">
-        <method signature="TC002_ProfileUpdateDaily.ProfileUpdate(java.lang.String,java.lang.String)[pri:0, instance:TestCases.TC002_ProfileUpdateDaily@792b749c]" name="ProfileUpdate" class="TestCases.TC002_ProfileUpdateDaily"/>
+        <method signature="TC002_ProfileUpdateDaily.ProfileUpdate(java.lang.String,java.lang.String)[pri:0, instance:TestCases.TC002_ProfileUpdateDaily@231f98ef]" name="ProfileUpdate" class="TestCases.TC002_ProfileUpdateDaily"/>
+        <method signature="TC002_ProfileUpdateDaily.ProfileUpdate(java.lang.String,java.lang.String)[pri:0, instance:TestCases.TC002_ProfileUpdateDaily@740fb309]" name="ProfileUpdate" class="TestCases.TC002_ProfileUpdateDaily"/>
+        <method signature="TC002_ProfileUpdateDaily.ProfileUpdate(java.lang.String,java.lang.String)[pri:0, instance:TestCases.TC002_ProfileUpdateDaily@43f02ef2]" name="ProfileUpdate" class="TestCases.TC002_ProfileUpdateDaily"/>
       </group> <!-- Regression_Testing -->
     </groups>
-    <test started-at="2024-10-12T08:45:17 IST" name="Test" finished-at="2024-10-12T08:45:46 IST" duration-ms="29621">
-      <class name="TestCases.TC001_JobSearchTest">
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.String,org.testng.ITestContext)[pri:0, instance:TestCases.TC001_JobSearchTest@302c971f]" started-at="2024-10-12T08:45:36 IST" name="setup" finished-at="2024-10-12T08:45:42 IST" duration-ms="5868" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[windows]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[https://www.naukri.com/]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[org.testng.TestRunner@22048bd6]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="runclass()[pri:0, instance:TestCases.TC001_JobSearchTest@302c971f]" started-at="2024-10-12T08:45:42 IST" name="runclass" finished-at="2024-10-12T08:45:42 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runclass -->
-        <test-method signature="Job_Search(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:TestCases.TC001_JobSearchTest@302c971f]" started-at="2024-10-12T08:45:42 IST" name="Job_Search" data-provider="AllData" finished-at="2024-10-12T08:45:46 IST" duration-ms="3821" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[siddhesh.vedre12@gmail.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Password]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Automation Test Engineer, Java, Selenium ]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[Mumbai, Navi Mumbai, pune]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[5]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[0]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: null
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.fail(Assert.java:116)
-at TestCases.TC001_JobSearchTest.Job_Search(TC001_JobSearchTest.java:62)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Job_Search -->
-      </class> <!-- TestCases.TC001_JobSearchTest -->
+    <test started-at="2024-10-14T08:54:21 IST" name="Linux_Chrome_Test" finished-at="2024-10-14T08:56:04 IST" duration-ms="103261">
       <class name="TestCases.TC002_ProfileUpdateDaily">
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.String,org.testng.ITestContext)[pri:0, instance:TestCases.TC002_ProfileUpdateDaily@792b749c]" started-at="2024-10-12T08:45:17 IST" name="setup" finished-at="2024-10-12T08:45:24 IST" duration-ms="7157" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.String,org.testng.ITestContext)[pri:0, instance:TestCases.TC002_ProfileUpdateDaily@231f98ef]" started-at="2024-10-14T08:54:22 IST" name="setup" finished-at="2024-10-14T08:54:56 IST" duration-ms="33974" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -130,7 +26,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
             </param>
             <param index="1">
               <value>
-                <![CDATA[windows]]>
+                <![CDATA[linux]]>
               </value>
             </param>
             <param index="2">
@@ -140,18 +36,14 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
             </param>
             <param index="3">
               <value>
-                <![CDATA[org.testng.TestRunner@22048bd6]]>
+                <![CDATA[org.testng.TestRunner@24105dc5]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="runclass()[pri:0, instance:TestCases.TC002_ProfileUpdateDaily@792b749c]" started-at="2024-10-12T08:45:25 IST" name="runclass" finished-at="2024-10-12T08:45:25 IST" duration-ms="17" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runclass -->
-        <test-method signature="ProfileUpdate(java.lang.String,java.lang.String)[pri:0, instance:TestCases.TC002_ProfileUpdateDaily@792b749c]" started-at="2024-10-12T08:45:27 IST" name="ProfileUpdate" data-provider="LoginData" finished-at="2024-10-12T08:45:36 IST" duration-ms="9047" status="FAIL">
+        <test-method signature="ProfileUpdate(java.lang.String,java.lang.String)[pri:0, instance:TestCases.TC002_ProfileUpdateDaily@231f98ef]" started-at="2024-10-14T08:55:00 IST" name="ProfileUpdate" data-provider="LoginData" finished-at="2024-10-14T08:56:04 IST" duration-ms="64400" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -166,27 +58,46 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           </params>
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[Unable to find element with locator By.xpath: //a[text()='View']
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//a[text()='View']"}
+  (Session info: chrome=129.0.6668.100)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.21.0', revision: '79ed462ef4'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
-Driver info: driver.version: RemoteWebDriver]]>
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [a3fc694e4e8b391c8a26a5caa5490dc8, findElement {value=//a[text()='View'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.100, chrome: {chromedriverVersion: 129.0.6668.100 (cf58cba358d..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:36647}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://172.19.0.3:4444/sessio..., se:cdpVersion: 129.0.6668.100, se:containerName: , se:noVncPort: 7900, se:vnc: ws://172.19.0.3:4444/sessio..., se:vncEnabled: true, se:vncLocalAddress: ws://172.19.0.3:7900, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a3fc694e4e8b391c8a26a5caa5490dc8]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to find element with locator By.xpath: //a[text()='View']
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[text()='View']"}
+  (Session info: chrome=129.0.6668.100)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.21.0', revision: '79ed462ef4'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
-Driver info: driver.version: RemoteWebDriver
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:168)
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [a3fc694e4e8b391c8a26a5caa5490dc8, findElement {value=//a[text()='View'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.100, chrome: {chromedriverVersion: 129.0.6668.100 (cf58cba358d..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:36647}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://172.19.0.3:4444/sessio..., se:cdpVersion: 129.0.6668.100, se:containerName: , se:noVncPort: 7900, se:vnc: ws://172.19.0.3:4444/sessio..., se:vncEnabled: true, se:vncLocalAddress: ws://172.19.0.3:7900, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a3fc694e4e8b391c8a26a5caa5490dc8
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
 at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
 at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
 at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
 at jdk.proxy2/jdk.proxy2.$Proxy21.click(Unknown Source)
-at PageObjects.HomePage.clickonProfile(HomePage.java:108)
-at TestCases.TC002_ProfileUpdateDaily.ProfileUpdate(TC002_ProfileUpdateDaily.java:32)
+at PageObjects.HomePage.clickonProfile(HomePage.java:112)
+at TestCases.TC002_ProfileUpdateDaily.ProfileUpdate(TC002_ProfileUpdateDaily.java:34)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -203,18 +114,12 @@ at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 at org.testng.TestRunner.privateRun(TestRunner.java:739)
 at org.testng.TestRunner.run(TestRunner.java:614)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:840)
 ]]>
             </full-stacktrace>
           </exception> <!-- org.openqa.selenium.NoSuchElementException -->
@@ -222,6 +127,273 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           </reporter-output>
         </test-method> <!-- ProfileUpdate -->
       </class> <!-- TestCases.TC002_ProfileUpdateDaily -->
-    </test> <!-- Test -->
+    </test> <!-- Linux_Chrome_Test -->
+    <test started-at="2024-10-14T08:54:21 IST" name="Linux_Firefox_Test" finished-at="2024-10-14T08:56:25 IST" duration-ms="124208">
+      <class name="TestCases.TC002_ProfileUpdateDaily">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.String,org.testng.ITestContext)[pri:0, instance:TestCases.TC002_ProfileUpdateDaily@740fb309]" started-at="2024-10-14T08:54:22 IST" name="setup" finished-at="2024-10-14T08:55:22 IST" duration-ms="60450" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[linux]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[https://www.naukri.com/]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[org.testng.TestRunner@2438dcd]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="ProfileUpdate(java.lang.String,java.lang.String)[pri:0, instance:TestCases.TC002_ProfileUpdateDaily@740fb309]" started-at="2024-10-14T08:55:23 IST" name="ProfileUpdate" data-provider="LoginData" finished-at="2024-10-14T08:56:25 IST" duration-ms="62694" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[siddhesh.vedre12@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Password]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[Unable to locate element: //a[text()='View']
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [d020d188-f24b-42fa-ac54-1d0dd875055a, findElement {value=//a[text()='View'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: firefox, browserVersion: 131.0.2, moz:accessibilityChecks: false, moz:buildID: 20241008210941, moz:geckodriverVersion: 0.35.0, moz:headless: false, moz:platformVersion: 5.15.153.1-microsoft-standa..., moz:processID: 196, moz:profile: /tmp/rust_mozprofile34NR31, moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://172.19.0.4:4444/sessio..., se:containerName: , se:noVncPort: 7900, se:vnc: ws://172.19.0.4:4444/sessio..., se:vncEnabled: true, se:vncLocalAddress: ws://172.19.0.4:7900, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (X11; Linux x86...}
+Session ID: d020d188-f24b-42fa-ac54-1d0dd875055a]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: //a[text()='View']
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [d020d188-f24b-42fa-ac54-1d0dd875055a, findElement {value=//a[text()='View'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: firefox, browserVersion: 131.0.2, moz:accessibilityChecks: false, moz:buildID: 20241008210941, moz:geckodriverVersion: 0.35.0, moz:headless: false, moz:platformVersion: 5.15.153.1-microsoft-standa..., moz:processID: 196, moz:profile: /tmp/rust_mozprofile34NR31, moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://172.19.0.4:4444/sessio..., se:containerName: , se:noVncPort: 7900, se:vnc: ws://172.19.0.4:4444/sessio..., se:vncEnabled: true, se:vncLocalAddress: ws://172.19.0.4:7900, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (X11; Linux x86...}
+Session ID: d020d188-f24b-42fa-ac54-1d0dd875055a
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy21.click(Unknown Source)
+at PageObjects.HomePage.clickonProfile(HomePage.java:112)
+at TestCases.TC002_ProfileUpdateDaily.ProfileUpdate(TC002_ProfileUpdateDaily.java:34)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:840)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ProfileUpdate -->
+      </class> <!-- TestCases.TC002_ProfileUpdateDaily -->
+    </test> <!-- Linux_Firefox_Test -->
+    <test started-at="2024-10-14T08:54:21 IST" name="Linux_Edge_Test" finished-at="2024-10-14T08:57:24 IST" duration-ms="182791">
+      <class name="TestCases.TC002_ProfileUpdateDaily">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.String,org.testng.ITestContext)[pri:0, instance:TestCases.TC002_ProfileUpdateDaily@43f02ef2]" started-at="2024-10-14T08:54:22 IST" name="setup" finished-at="2024-10-14T08:57:24 IST" duration-ms="181546" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[linux]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[https://www.naukri.com/]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[org.testng.TestRunner@4135082b]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.SessionNotCreatedException">
+            <message>
+              <![CDATA[Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+Host info: host: 'LAPTOP-2OD9FJD5', ip: '192.168.0.101']]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+Host info: host: 'LAPTOP-2OD9FJD5', ip: '192.168.0.101'
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:536)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:232)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:161)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:141)
+at TestCases.BaseClass.setup(BaseClass.java:167)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:655)
+at org.testng.TestRunner.beforeRun(TestRunner.java:644)
+at org.testng.TestRunner.run(TestRunner.java:610)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: org.openqa.selenium.TimeoutException: java.util.concurrent.TimeoutException
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
+Driver info: driver.version: RemoteWebDriver
+at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:399)
+at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute(JdkHttpClient.java:355)
+at org.openqa.selenium.remote.tracing.TracedHttpClient.execute(TracedHttpClient.java:54)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:89)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:162)
+at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+... 22 more
+Caused by: java.util.concurrent.TimeoutException
+at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:382)
+... 32 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="ProfileUpdate(java.lang.String,java.lang.String)[pri:0, instance:TestCases.TC002_ProfileUpdateDaily@43f02ef2]" started-at="2024-10-14T08:57:24 IST" name="ProfileUpdate" data-provider="LoginData" finished-at="2024-10-14T08:57:24 IST" duration-ms="1" status="SKIP">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[siddhesh.vedre12@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Password]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.SessionNotCreatedException">
+            <message>
+              <![CDATA[Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+Host info: host: 'LAPTOP-2OD9FJD5', ip: '192.168.0.101']]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+Host info: host: 'LAPTOP-2OD9FJD5', ip: '192.168.0.101'
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:536)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:232)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:161)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:141)
+at TestCases.BaseClass.setup(BaseClass.java:167)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:655)
+at org.testng.TestRunner.beforeRun(TestRunner.java:644)
+at org.testng.TestRunner.run(TestRunner.java:610)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: org.openqa.selenium.TimeoutException: java.util.concurrent.TimeoutException
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
+Driver info: driver.version: RemoteWebDriver
+at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:399)
+at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute(JdkHttpClient.java:355)
+at org.openqa.selenium.remote.tracing.TracedHttpClient.execute(TracedHttpClient.java:54)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:89)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:162)
+at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+... 22 more
+Caused by: java.util.concurrent.TimeoutException
+at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:382)
+... 32 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ProfileUpdate -->
+      </class> <!-- TestCases.TC002_ProfileUpdateDaily -->
+    </test> <!-- Linux_Edge_Test -->
   </suite> <!-- Suite -->
 </testng-results>

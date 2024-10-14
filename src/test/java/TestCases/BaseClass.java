@@ -128,10 +128,10 @@ public class BaseClass {
 				// Windows os initilization
 				capable.setPlatform(Platform.WIN11);
 
-			} else if (os.equalsIgnoreCase("mac")) {
+			} else if (os.equalsIgnoreCase("linux")) {
 
 				// Windows os initilization
-				capable.setPlatform(Platform.MAC);
+				capable.setPlatform(Platform.LINUX);
 
 			} else {
 				throw new IllegalArgumentException("Invalid OS entered");
@@ -148,7 +148,7 @@ public class BaseClass {
 				break;
 				
 			case "edge":
-				capable.setBrowserName("Edge");   //-----  Remote  Edge  -----
+				capable.setBrowserName("MicrosoftEdge");   //-----  Remote  Edge  -----
 				break;
 				
 			case "firefox":
@@ -164,7 +164,7 @@ public class BaseClass {
 
 			// >>>>>>>>>>>>>>>>>>>>>>>  Assign Selenium Hub Server to the Driver <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 			   try {
-			        driver = new RemoteWebDriver(new URL("http://192.168.0.101:4444"), capable);
+			        driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), capable);
 			    } catch (MalformedURLException e) {
 			    	System.out.println("URL Error");
 			        throw new RuntimeException("Invalid RemoteWebDriver URL", e);
