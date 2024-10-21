@@ -13,8 +13,9 @@ public class ExcelUtility {
     private XSSFWorkbook workbook;
     private XSSFSheet sheet;
 
-    // Constructor to load the Excel file and select a specific sheet
+    // >>>>>>>>>>>>>>>>>>>>>  Constructor to load the Excel file and select a specific sheet  <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
     public ExcelUtility(String filePath, String sheetName) throws IOException {
+    	
         FileInputStream fis = new FileInputStream(new File(filePath));
         workbook = new XSSFWorkbook(fis);
         sheet = workbook.getSheet(sheetName);
@@ -22,7 +23,7 @@ public class ExcelUtility {
 
     
     
-    // Method to fetch the data from a specific row
+    // >>>>>>>>>>>>>>>>>>>>>>>>>>  Get Data from a specific row  <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
     public Object[][] getRowData(int rowIndex) {
     	
         int numOfCells = sheet.getRow(rowIndex).getLastCellNum();
@@ -36,6 +37,9 @@ public class ExcelUtility {
         return rowData;
     }
     
+    
+    
+    //  >>>>>>>>>>>>>>>>>>>>>>>>>>  Get Data From Cells  <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
     public Object[][] getCellData(int rowIndex, int numOfCells) {
     	
         // Get the row from the sheet based on rowIndex
@@ -62,7 +66,7 @@ public class ExcelUtility {
 
     
     
-    // Method to close the workbook
+    //  >>>>>>>>>>>>>>>>>>  Method to close the workbook  <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
     public void close() throws IOException {
         if (workbook != null) {
             workbook.close();
